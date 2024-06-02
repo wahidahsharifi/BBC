@@ -1,0 +1,241 @@
+
+* {
+  box-sizing: border-box;
+}
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+main>div{
+  width: 100%;
+  position: sticky;
+  display: flex;
+  flex-grow: row wrap;
+  justify-content: space-between;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 2400px;
+  margin: auto;
+}
+.gray{
+  color: gray;
+}
+.left-border{
+  position: static;
+  padding-left: 5px;
+  border-left: 2px solid rgb(255, 0, 0);
+  margin-left: 5px;
+}
+section{
+  float: left;
+}
+div{
+  position: absolute;
+  bottom: 5%;
+}
+h2{
+  font-size: 20px;
+}
+.top-topic:hover,
+section>section:hover,
+article>section:hover{
+  opacity: .5;
+  cursor: pointer;
+}
+/****************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header{
+  height: 70px;
+  background-color: rgb(0, 0, 0);
+  /* overflow-x: auto; */
+}
+header *{
+  font-size: 13px;
+  color: #fff;
+  float: left;
+}
+header img{
+  width: 152px;
+  height: 52px;
+  margin: 9px 0 9px 10px;
+}
+aside{
+  width: 170px;
+}
+aside:hover{
+  cursor: pointer;
+  border-bottom: 2px solid blue;
+}
+aside img{
+  width: 50px;
+  height: 50px;
+}
+nav p{
+  font-weight: 900;
+}
+ul{
+  font-weight: 700;
+  line-height: 50px;
+  list-style-type: none;
+  padding-left: 0;
+}
+li{
+  width: 60px;
+  text-align: center;
+}
+li:hover{
+  border-bottom: 2px solid blue;
+}
+form{
+  float: right;
+}
+form>a{
+  display: none;
+  font-size: 30px;
+  padding-right: 5px;
+  text-decoration: none;
+  line-height: 70px;
+}
+input{
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  color: black;
+  border-radius: 10px;
+  margin: 15px 0 15px 0;
+  border: none;
+  float: right;
+}
+ul, header img{
+  cursor: pointer;
+}
+/****************************************/
+
+main>section h2, h1{
+  color: #fff;
+}
+
+.top-topic{
+  position: relative;
+  width: 48%;
+  height: 425px;
+  margin: 0 1% 0 1%;
+}
+.top-topic>img{
+  width: 49%;
+  height: 100%;
+}
+.top-topic+section{
+  width: 48%;
+  height: 450px;
+  margin: 0 1% 0 1%;
+}
+section>section{
+  position: relative;
+  width: 49%;
+  height: 200px;
+}
+section>section:first-child{
+  margin: 0 2% 0 0;
+}
+section>section:last-child{
+  margin: 25px 0 0 2%;
+}
+.three{
+  margin-top: 25px;
+}
+section>section>img{
+  width: 100%;
+  height: 100%;
+}
+/****************************************/
+
+main>h2{
+  padding-left: 5px;
+  border-left: 3px solid #f00;
+  margin-left: 5px;
+}
+
+article{
+  margin: 0 1% 0 1%;
+}
+article>section{
+  width: 32%;
+  float: left;
+}
+article>section+section{
+  margin: 0 0 0 1%;
+}
+article section img{
+  width: 100%;
+  height: auto;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 1020px) {
+  form>a{
+    display: inline-block;
+  }
+  input{
+    display: none;
+  }
+}
+@media screen and (max-width: 860px) {
+  .hthree{
+    float: none;
+    display: flex;
+    flex-grow: row nowrap;
+    justify-content: space-between;
+  }
+  aside{
+    width: 50px;
+  }
+  aside>p{
+    display: none;
+  }
+  ul{
+    padding-left: 10px;
+  }
+  main>.section{
+    float: none;
+    width: 98%;
+  }
+  .top-topic{
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 760px) {
+  li{
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .top-topic{
+    height: 300px;
+    margin: 0;
+  }
+  article>section{
+    float: none;
+    width: 100%;
+  }
+  section>section{
+    float: none;
+    width: 100%;
+  }
+}
